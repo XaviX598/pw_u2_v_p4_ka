@@ -17,7 +17,7 @@
                 <button class="botones" v-on:click="opcionesNumericas">9</button>
                 <button class="botones" v-on:click="opcionesNumericas">/</button>
                 <button class="ceroDosColumnas" v-on:click="opcionesNumericas">0</button>
-                <button class="botones" v-on:click="opcionesNumericas">=</button>
+                <button class="botones" @click="opcionesNumericas">=</button> <!--se puede cambiar el v-on: por un @-->
                 <button class="botones" v-on:click="opcionesNumericas">*</button>
                 <label class="pantalla">{{ numero }}</label>
                 <label class="pantalla">{{ numero }}</label>
