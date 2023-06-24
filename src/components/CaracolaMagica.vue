@@ -33,7 +33,11 @@ export default {
             console.log(oldValue);
             if (value.includes('?')) { //solo si la pregunta incluye ? se imprime
                 //console.log('consumir el api')
-                this.consumirAPI()
+                setTimeout(() => {
+                    this.respuesta = "pensando...";
+                    this.consumirAPI()
+                }, 1000)
+                this.pregunta = " "
             }
         },
     },
@@ -47,6 +51,7 @@ export default {
             // console.log(answer)
             // console.log(image)
             //o tambien 
+
             const { answer, image } = respuesta
             console.log(answer)
             console.log(image)
@@ -100,4 +105,5 @@ h2 {
 p {
     font-size: 20px;
     margin-top: 0px;
-}</style>
+}
+</style>
