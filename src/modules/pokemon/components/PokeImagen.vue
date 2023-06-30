@@ -43,6 +43,6 @@ img {
 
 .contenedorImg {
     height: 550px;
-    
+    justify-content: center;
 }
 </style>
