@@ -37,12 +37,14 @@ export default {
 img {
     /* permite que las dos imagenes esten en una misma posicion */
     position: absolute;
-    height: 550px;
-    left: 35%;
+    height: 300px;
+    /* left: 35%; */
 }
 
 .contenedorImg {
-    height: 550px;
+    height: 370px;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 </style>
