@@ -1,7 +1,11 @@
 <template>
-    <h1>Juego Pokemon</h1>
-    <PokeImagen :pokemonId="384" :muestraPokemon="false" />
-    <PokemonOps :opciones="arreglo"/>
+    <h1 v-if="!pokemonCorrecto"> Espere por favor... </h1>
+    <div v-else>
+        <h1>Juego Pokemon</h1>
+        <PokeImagen  :pokemonId="pokemonCorrecto.id" :muestraPokemon="showPokemon" />
+        <!-- para resivir el argumento que mandamos desde el hijo se pone $event -->
+        <PokemonOps v-on:seleccionado="revisarSeleccion($event)"  :opciones="arreglo" />
+    </div>
 </template>
 
 <script>
@@ -11,9 +15,11 @@ import PokeImagen from '../components/PokeImagen.vue'
 import obtenerFachadaPokemons from "../helpers/clientePokemonApi"
 
 export default {
-    data(){
-        return{
-            arreglo: null
+    data() {
+        return {
+            arreglo: [],
+            pokemonCorrecto: null,
+            showPokemon: false
         }
     },
 
@@ -30,6 +36,14 @@ export default {
             const arregloPokemons = await obtenerFachadaPokemons()
             // console.log(arregloPokemons)
             this.arreglo = arregloPokemons
+            const indicePokemon = Math.floor(Math.random() * 4)
+            this.pokemonCorrecto = this.arreglo[indicePokemon]
+        },
+        revisarSeleccion(idSeleccionado){
+            // console.log('evento en el padre')
+            if(idSeleccionado == this.pokemonCorrecto.id){
+                this.showPokemon =  true
+            }
         }
     }
 }

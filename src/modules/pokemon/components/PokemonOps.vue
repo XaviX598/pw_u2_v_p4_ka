@@ -5,7 +5,8 @@
             <li>2</li>
             <li>3</li>
             <li>4</li> -->
-            <li v-for="pokemon in opciones" :key="pokemon.id"> {{ pokemon.nombre }}</li>
+            <!-- para mandar el evento hacia el padre se pone $emit, se le bautiza con un nombre que debe ir en el padre como evento y luego se puede poner argumentos -->
+            <li @click="$emit('seleccionado',pokemon.id)" v-for="pokemon in opciones" :key="pokemon.id"> {{ pokemon.nombre }}</li>
         </ul>
     </div>
 </template>
@@ -16,6 +17,11 @@ export default {
         opciones: {
             type: Array,
             required: true
+        }
+    }, 
+    methods: {
+        pruebaDeEvento(){
+            console.log('probando evento dentro de ops')
         }
     }
 
