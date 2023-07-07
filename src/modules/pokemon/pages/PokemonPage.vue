@@ -14,7 +14,7 @@
             <div v-else>
                 <h1>Juego Pokemon</h1>
                 <PokeImagen :pokemonId="pokemonCorrecto.id" :muestraPokemon="showPokemon" />
-                <!-- para resivir el argumento que mandamos desde el hijo se pone $event -->
+                <!-- para recibir el argumento que mandamos desde el hijo se pone $event -->
                 <PokemonOps v-if="mostrarOps" v-on:seleccionado="revisarSeleccion($event)" :opciones="arreglo" />
             </div>
         </div>
