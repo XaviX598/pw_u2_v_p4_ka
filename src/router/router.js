@@ -21,10 +21,10 @@ const routes = [
     {path: '/pokemon', 
     component: () => import('../modules/pokemon/pages/PokemonPage.vue')},
     {path: '/pokemon/salir', 
-    component: () => import('../modules/pokemon/pages/NoEncontradoPage.vue')},
+    component: () => import('../modules/pokemon/pages/PokemonSalirPage.vue')},
     //debemos encontrar un bulcard que si no es una de las paginas configuradas o definidas debemos mostrar el no encontrada
     {path: '/:pathMatch(.*)*', 
-    component: () => import('../modules/pokemon/pages/JuegoPage.vue')}
+    component: () => import('../modules/pokemon/pages/NoEncontradoPage.vue')}
 ]
 //createRouter es un metodo y por eso se hace asi, y recibe un objeto
 const router = createRouter({

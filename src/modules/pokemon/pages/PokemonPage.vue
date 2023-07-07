@@ -134,11 +134,12 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: aliceblue;
+    color: #5d40a5;
+    height: 30px;
 }
 
 h1{
-    color: aliceblue;
+    color:#5d40a5;
 
 }
 
@@ -180,16 +181,21 @@ h1{
 
 .felicidades {
 
-    color: rgb(183, 183, 230);
+    color: #381f72;
 }
 
 .fallido {
 
-    color: rgb(229, 180, 180);
+    color: #c15050;
 }
 
 .juegoPokemon{
     /* height: 20000px; */
-    margin-top: -50px;
+    margin-top: -0px;
+    margin-top: 10px;
+    background-image: url('../store/fondojuego.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -140px;
 }
 </style>

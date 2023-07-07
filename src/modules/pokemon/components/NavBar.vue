@@ -21,8 +21,18 @@ div{
 }
 div a{
     font-weight: bold;
-    color: aliceblue;
+    color: #c15050;
     margin: 0 10px;
+    font-size: 20px;
+}
+
+a:hover{
+    color: #5d40a5;
+}
+
+.router{
+    margin-top: -30px;
+    margin-bottom: 20px;
 }
 
 </style>

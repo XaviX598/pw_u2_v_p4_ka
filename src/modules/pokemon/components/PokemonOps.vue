@@ -34,7 +34,7 @@ export default {
 li {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    background-color: #2caaaa;
+    background-color: #c15050;
     color: #bbdede;
     margin-bottom: 10px;
     width: 250px;
@@ -51,8 +51,8 @@ li {
 
 li:hover {
     /* background-color: rgb(80, 103, 120); */
-    background: rgb(44, 170, 170);
-    background: radial-gradient(circle, rgba(44, 170, 170, 1) 1%, rgba(2, 0, 36, 1) 49%, rgba(44, 170, 170, 1) 96%);
+    background:  #381f72;
+    background: radial-gradient(circle, #381f72 1%, rgba(2, 0, 36, 1) 49%,  #381f72 96%);
 }
 
 .contenedorOps {
@@ -60,5 +60,6 @@ li:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 45px;
 }
 </style>
